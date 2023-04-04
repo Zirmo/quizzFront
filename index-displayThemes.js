@@ -1,12 +1,12 @@
 const displayThemes = ( themes) => {
-    const tbody = document.querySelector("tbody")
+    const ul = document.querySelector("ul")
     //Creér une ligne dans la table pour chaque utilisateur
     themes.forEach(theme => {
-        const tr = document.createElement("tr");
-        const tdTheme= document.createElement("td")
-        tdTheme.textContent = theme.nom
-        tr.appendChild(tdTheme)
-        tbody.appendChild(tr)
+        const li = document.createElement('li')
+        const aTheme= document.createElement("a href=\"#\"")
+        aTheme.textContent = theme.nom
+        li.appendChild(aTheme)
+        ul.appendChild(li)
 
     })
 }
